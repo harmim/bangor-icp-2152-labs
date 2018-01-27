@@ -2,6 +2,8 @@ import static org.junit.Assert.*;
 
 
 /**
+ * Exercise 3, 4: Testing BankAccount
+ *
  * @author Dominik Harmim <harmim6@gmail.com>
  */
 public class BankAccountTest

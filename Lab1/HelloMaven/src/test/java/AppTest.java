@@ -2,6 +2,8 @@ import static org.junit.Assert.*;
 
 
 /**
+ * Exercise 2: Tests program for Hello World project
+ *
  * @author Dominik Harmim <harmim6@gmail.com>
  */
 public class AppTest

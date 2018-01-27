@@ -4,6 +4,8 @@ import java.awt.event.ActionListener;
 
 
 /**
+ * Exercise 6: Providing a GUI for BankAccount
+ *
  * @author Dominik Harmim <harmim6@gmail.com>
  */
 public class BankAccountViewer

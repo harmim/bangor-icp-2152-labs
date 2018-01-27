@@ -1,4 +1,6 @@
 /**
+ * Exercises 3, 4
+ *
  * A bank account has a balance that can be changed by
  * deposits and withdrawals.
  *
@@ -63,6 +65,8 @@ public class BankAccount
 
 
 	/**
+	 * Exercise 5: Modifying BankAccount
+	 *
 	 * Transfers from this to other.
 	 * @param amount the sum to be transferred
 	 * @param other the account into which money is transferred

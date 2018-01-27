@@ -7,6 +7,8 @@ import java.sql.Statement;
 
 
 /**
+ * Exercises 9, 10
+ *
  * @author Dominik Harmim <harmim6@gmail.com>
  */
 public class HSQLTester

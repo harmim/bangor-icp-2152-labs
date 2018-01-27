@@ -7,7 +7,11 @@ import java.util.Properties;
 
 
 /**
+ * Exercises 9, 10
+ *
  * A simple data source for getting database connections.
+ *
+ * @author Dominik Harmim <harmim6@gmail.com>
  */
 public class SimpleDataSource
 {
@@ -19,7 +23,7 @@ public class SimpleDataSource
 	/**
 	 * Initializes the data source.
 	 *
-	 * @param fileName the name of the property file that
+	 * @param in the name of the property file that
 	 * contains the database driver, URL, username, and password
 	 */
 	public static void init(InputStream in) throws IOException, ClassNotFoundException

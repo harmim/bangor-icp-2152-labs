@@ -11,7 +11,7 @@ import java.util.Properties;
  *
  * A simple data source for getting database connections.
  *
- * @author Dominik Harmim <harmim6@gmail.com>
+ * @author Dominik Harmim harmim6@gmail.com
  */
 public class SimpleDataSource
 {

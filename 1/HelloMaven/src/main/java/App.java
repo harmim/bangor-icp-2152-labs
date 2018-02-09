@@ -1,7 +1,7 @@
 /**
  * Exercise 1: Maven Hello World project
  *
- * @author Dominik Harmim <harmim6@gmail.com>
+ * @author Dominik Harmim harmim6@gmail.com
  */
 public class App
 {

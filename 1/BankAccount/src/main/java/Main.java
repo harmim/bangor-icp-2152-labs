@@ -4,7 +4,7 @@ import org.apache.commons.collections4.list.GrowthList;
 /**
  * Exercise 7: Testing a Dependency
  *
- * @author Dominik Harmim <harmim6@gmail.com>
+ * @author Dominik Harmim harmim6@gmail.com
  */
 public class Main
 {

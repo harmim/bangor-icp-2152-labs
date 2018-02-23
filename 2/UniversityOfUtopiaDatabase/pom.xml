@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>icp-2152</groupId>
+	<artifactId>UniversityOfUtopiaDatabase</artifactId>
+	<name>UniversityOfUtopiaDatabase</name>
+	<version>1.0</version>
+
+	<contributors>
+		<contributor>
+			<name>Dominik Harmim</name>
+			<email>harmim6@gmail.com</email>
+		</contributor>
+	</contributors>
+
+	<dependencies>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.45</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>sql-maven-plugin</artifactId>
+				<version>1.5</version>
+
+				<dependencies>
+					<dependency>
+						<groupId>mysql</groupId>
+						<artifactId>mysql-connector-java</artifactId>
+						<version>5.1.45</version>
+					</dependency>
+				</dependencies>
+
+				<configuration>
+					<driver>${mysql.driver}</driver>
+					<url>${mysql.url}</url>
+					<username>${mysql.user}</username>
+					<password>${mysql.password}</password>
+				</configuration>
+
+				<executions>
+					<execution>
+						<phase>generate-test-resources</phase>
+
+						<goals>
+							<goal>execute</goal>
+						</goals>
+
+						<configuration>
+							<srcFiles>
+								<srcFile>src/test/resources/1-destroy.sql</srcFile>
+								<srcFile>src/test/resources/2-create.sql</srcFile>
+								<srcFile>src/test/resources/3-insert.sql</srcFile>
+							</srcFiles>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<mysql.driver>com.mysql.jdbc.Driver</mysql.driver>
+		<mysql.url>jdbc:mysql://localhost:3306/icp2152_lab2</mysql.url>
+		<mysql.user>root</mysql.user>
+		<mysql.password></mysql.password>
+	</properties>
+</project>

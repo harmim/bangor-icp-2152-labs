@@ -265,8 +265,7 @@ public class GuiWeather
 
 		// creates file url
 		URL fileUrl = getClass().getResource(
-			"/images/"
-				+ weatherType.toLowerCase().replace(' ', '_') + ".png"
+			"/images/" + weatherType.toLowerCase().replace(' ', '_') + ".png"
 		);
 		if (fileUrl != null) {
 			try {

@@ -32,7 +32,7 @@ public class SimpleDataSource
 	 *
 	 * @param inputStream the property file resource that contains the database driver, URL, user, and password
 	 *
-	 * @throws IOException if properties file couldn't be opend
+	 * @throws IOException if properties file couldn't be opened
 	 * @throws ClassNotFoundException if there is problem with mysql driver
 	 */
 	public static void init(InputStream inputStream) throws IOException, ClassNotFoundException

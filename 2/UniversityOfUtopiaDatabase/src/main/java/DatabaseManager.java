@@ -4,16 +4,16 @@ import java.util.*;
 
 
 /**
- * Respond to requests, received via the interface, for the execution of specifc SQL commands.
+ * Respond to requests, received via the interface, for the execution of specific SQL commands.
  *
  * @author Dominik Harmim harmim6@gmail.com
  */
 public class DatabaseManager
 {
 	/**
-	 * Creates and initialize databbase manager.
+	 * Creates and initialize database manager.
 	 *
-	 * @throws IOException if properties file couldn't be opend
+	 * @throws IOException if properties file couldn't be opened
 	 * @throws ClassNotFoundException if there is problem with mysql driver
 	 */
 	public DatabaseManager() throws IOException, ClassNotFoundException
@@ -219,7 +219,7 @@ public class DatabaseManager
 	 * Returns all staff who teach modules on which a specific student is registered.
 	 *
 	 * @param student specific student
-	 * @return ArrayList with appropriate staff and theire modules
+	 * @return ArrayList with appropriate staff and their modules
 	 *
 	 * @throws SQLException if there is connection or any other database access error
 	 */
@@ -286,16 +286,16 @@ public class DatabaseManager
 	 * @param resultSet ResultSet to be converted
 	 * @return converted ArrayList
 	 *
-	 * @throws SQLException if ther is ResultSet access error
+	 * @throws SQLException if there is ResultSet access error
 	 */
 	private ArrayList<Map<String, Object>> resultSetToArrayList(ResultSet resultSet) throws SQLException
 	{
 		ResultSetMetaData metaData = resultSet.getMetaData();
 		int columnsCount = metaData.getColumnCount();
-		ArrayList<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
+		ArrayList<Map<String, Object>> list = new ArrayList<>();
 
 		while (resultSet.next()) {
-			HashMap<String, Object> row = new HashMap<String, Object>(columnsCount);
+			HashMap<String, Object> row = new HashMap<>(columnsCount);
 
 			for (int i = 1; i <= columnsCount; i++) {
 				row.put(metaData.getColumnName(i), resultSet.getObject(i));

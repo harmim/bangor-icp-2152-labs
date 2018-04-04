@@ -5,9 +5,6 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -110,13 +107,7 @@ public class GuiWeather
 		tableModel.addColumn("Visibility", new String[]{""});
 
 		// Handles forecast button click.
-		buttonForecast.addActionListener(new ActionListener()
-		{
-			public void actionPerformed(ActionEvent e)
-			{
-				forecastAction();
-			}
-		});
+		buttonForecast.addActionListener(e -> forecastAction());
 	}
 
 
@@ -185,9 +176,9 @@ public class GuiWeather
 
 		// writes to search output file
 		String searchElementName = "search";
-		HashMap<String, String> attributes = new HashMap<String, String>(1);
+		HashMap<String, String> attributes = new HashMap<>(1);
 		attributes.put("date", (new Date()).toString());
-		HashMap<String, String> subElements = new HashMap<String, String>(3);
+		HashMap<String, String> subElements = new HashMap<>(3);
 		subElements.put("term", query);
 
 		if (Integer.parseInt(resultCount) == 0) {
@@ -230,7 +221,7 @@ public class GuiWeather
 			throw new Exception("I/O error.");
 		}
 
-		HashMap<String, String> result = new HashMap<String, String>(7);
+		HashMap<String, String> result = new HashMap<>(7);
 		// Parses XML file and return weather information.
 		try {
 			xmlParser.parse(inputStream);

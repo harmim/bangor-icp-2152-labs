@@ -106,6 +106,7 @@ public class XmlProcessor
 
 		Iterator attributesIterator = attributes.entrySet().iterator();
 		while (attributesIterator.hasNext()) {
+			//noinspection unchecked
 			Map.Entry<String, String> pair = (Map.Entry<String, String>) attributesIterator.next();
 			element.setAttribute(pair.getKey(), pair.getValue());
 			attributesIterator.remove();
@@ -113,6 +114,7 @@ public class XmlProcessor
 
 		Iterator subElementsIterator = subElements.entrySet().iterator();
 		while (subElementsIterator.hasNext()) {
+			//noinspection unchecked
 			Map.Entry<String, String> pair = (Map.Entry<String, String>) subElementsIterator.next();
 			Element subElement = (Element) element.appendChild(document.createElement(pair.getKey()));
 			subElement.setTextContent(pair.getValue());

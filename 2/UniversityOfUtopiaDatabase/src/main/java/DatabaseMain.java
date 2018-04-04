@@ -13,10 +13,7 @@ public class DatabaseMain
 		DatabaseTextInterface textInterface;
 		try {
 			textInterface = new DatabaseTextInterface();
-		} catch (IOException e) {
-			System.out.println(e.toString());
-			return;
-		} catch (ClassNotFoundException e) {
+		} catch (IOException | ClassNotFoundException e) {
 			System.out.println(e.toString());
 			return;
 		}

@@ -42,7 +42,7 @@ public class DatabaseTextInterface
 	/**
 	 * Creates and initialize database text interface.
 	 *
-	 * @throws IOException if properties file couldn't be opend
+	 * @throws IOException if properties file couldn't be opened
 	 * @throws ClassNotFoundException if there is problem with mysql driver
 	 */
 	public DatabaseTextInterface() throws IOException, ClassNotFoundException
@@ -127,7 +127,7 @@ public class DatabaseTextInterface
 							break;
 
 						case 2: // Add student
-							columns = new ArrayList<Column>(3);
+							columns = new ArrayList<>(3);
 							System.out.print("Enter Student ID: ");
 							columns.add(new Column("student_id", input.next() + input.nextLine()));
 							System.out.print("Enter Name: ");
@@ -167,7 +167,7 @@ public class DatabaseTextInterface
 							System.out.print("Enter Student ID you want to update: ");
 							Column id = new Column("student_id", input.next() + input.nextLine());
 
-							columns = new ArrayList<Column>(3);
+							columns = new ArrayList<>(3);
 							System.out.print("Enter new Name: ");
 							columns.add(new Column("student_name", input.next() + input.nextLine()));
 							System.out.print("Enter new Degree Scheme: ");
@@ -202,7 +202,7 @@ public class DatabaseTextInterface
 							break;
 
 						case 2: // Add staff
-							columns = new ArrayList<Column>(3);
+							columns = new ArrayList<>(3);
 							System.out.print("Enter Staff ID: ");
 							columns.add(new Column("staff_id", input.next() + input.nextLine()));
 							System.out.print("Enter Name: ");
@@ -242,7 +242,7 @@ public class DatabaseTextInterface
 							System.out.print("Enter Staff ID you want to update: ");
 							Column id = new Column("staff_id", input.next() + input.nextLine());
 
-							columns = new ArrayList<Column>(3);
+							columns = new ArrayList<>(3);
 							System.out.print("Enter new Name: ");
 							columns.add(new Column("staff_name", input.next() + input.nextLine()));
 							System.out.print("Enter new Staff Grade: ");
@@ -284,7 +284,7 @@ public class DatabaseTextInterface
 							break;
 
 						case 2: // Add module
-							columns = new ArrayList<Column>(3);
+							columns = new ArrayList<>(3);
 							System.out.print("Enter Module ID: ");
 							columns.add(new Column("module_id", input.next() + input.nextLine()));
 							System.out.print("Enter Name: ");
@@ -324,7 +324,7 @@ public class DatabaseTextInterface
 							System.out.print("Enter Module ID you want to update: ");
 							Column id = new Column("module_id", input.next() + input.nextLine());
 
-							columns = new ArrayList<Column>(3);
+							columns = new ArrayList<>(3);
 							System.out.print("Enter new Name: ");
 							columns.add(new Column("module_name", input.next() + input.nextLine()));
 							System.out.print("Enter new Credits: ");
@@ -398,16 +398,14 @@ public class DatabaseTextInterface
 				default:
 					return false;
 			}
-		} catch (SQLException e) {
-			System.out.println(e.toString());
-			return false;
-		} catch (InputMismatchException e) {
+		} catch (SQLException | InputMismatchException e) {
 			System.out.println(e.toString());
 			return false;
 		}
 
 		System.out.println("\nPress Enter key to continue...");
 		try {
+			//noinspection ResultOfMethodCallIgnored
 			System.in.read();
 		} catch (Exception ignored) {}
 
@@ -456,7 +454,7 @@ public class DatabaseTextInterface
 	 */
 	private void displayMenuContent()
 	{
-		ArrayList<String> options = new ArrayList<String>(4);
+		ArrayList<String> options = new ArrayList<>(4);
 		switch (currentMenu) {
 			case MAIN:
 				options.addAll(Arrays.asList(

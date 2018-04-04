@@ -11,7 +11,7 @@ public class Column
 	private String key;
 
 	/**
-	 * Column name/labe.
+	 * Column name/label.
 	 */
 	private String name;
 
@@ -51,7 +51,7 @@ public class Column
 
 	/**
 	 * Creates column with primary key name and it's value.
-	 * Typically column retreived from database or column to be processed in query.
+	 * Typically column retrieved from database or column to be processed in query.
 	 *
 	 * @param key primary key name
 	 * @param value particular value

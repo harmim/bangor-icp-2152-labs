@@ -10,7 +10,7 @@ public class Main
 {
 	public static void main(String[] args)
 	{
-		GrowthList<BankAccount> bank = new GrowthList<BankAccount>();
+		GrowthList<BankAccount> bank = new GrowthList<>();
 		for (int i = 0; i < 3; i++) {
 			bank.add(new BankAccount((i + 1) * 100));
 		}

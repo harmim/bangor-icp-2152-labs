@@ -16,10 +16,7 @@ public class MySqlTester
 		InputStream stream = MySqlTester.class.getResourceAsStream("/database.properties");
 		try {
 			SimpleDataSource.init(stream);
-		} catch (IOException e) {
-			System.out.println(e.toString());
-			return;
-		} catch (ClassNotFoundException e) {
+		} catch (IOException | ClassNotFoundException e) {
 			System.out.println(e.toString());
 			return;
 		}

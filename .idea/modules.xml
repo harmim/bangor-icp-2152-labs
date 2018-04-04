@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/1/BankAccount/BankAccount.iml" filepath="$PROJECT_DIR$/1/BankAccount/BankAccount.iml" />
+      <module fileurl="file://$PROJECT_DIR$/1/HelloMaven/HelloMaven.iml" filepath="$PROJECT_DIR$/1/HelloMaven/HelloMaven.iml" />
+      <module fileurl="file://$PROJECT_DIR$/4/Servlets/Servlets.iml" filepath="$PROJECT_DIR$/4/Servlets/Servlets.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2/UniversityOfUtopiaDatabase/UniversityOfUtopiaDatabase.iml" filepath="$PROJECT_DIR$/2/UniversityOfUtopiaDatabase/UniversityOfUtopiaDatabase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3/Weather/Weather.iml" filepath="$PROJECT_DIR$/3/Weather/Weather.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/mini_projects.iml" filepath="$PROJECT_DIR$/.idea/mini_projects.iml" />
+    </modules>
+  </component>
+</project>

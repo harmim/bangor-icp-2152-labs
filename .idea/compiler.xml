@@ -16,7 +16,7 @@
     <bytecodeTargetLevel>
       <module name="BankAccount" target="1.8" />
       <module name="HelloMaven" target="1.8" />
-      <module name="Servlets" target="1.5" />
+      <module name="Servlets" target="1.8" />
       <module name="UniversityOfUtopiaDatabase" target="1.8" />
       <module name="Weather" target="1.8" />
     </bytecodeTargetLevel>

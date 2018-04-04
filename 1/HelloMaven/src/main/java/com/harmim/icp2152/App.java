@@ -1,3 +1,6 @@
+package com.harmim.icp2152;
+
+
 /**
  * Exercise 1: Maven Hello World project
  *

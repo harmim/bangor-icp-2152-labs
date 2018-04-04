@@ -6,8 +6,8 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<!-- Exercise 1: Maven Hello World project -->
-	<groupId>icp-2152</groupId>
-	<artifactId>HelloMaven</artifactId>
+	<groupId>com.harmim.icp2152</groupId>
+	<artifactId>hello-maven</artifactId>
 	<name>HelloMaven</name>
 	<version>1.0</version>
 

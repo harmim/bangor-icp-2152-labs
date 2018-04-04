@@ -3,6 +3,8 @@
 
 # IntelliJ
 !/.idea/
+/.idea/*.local.*
+/.idea/workspace.xml
 
 # Maven
 target/

@@ -5,8 +5,8 @@
 
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>icp-2152</groupId>
-	<artifactId>Servlets</artifactId>
+	<groupId>com.harmim.icp2152</groupId>
+	<artifactId>servlets</artifactId>
 	<name>Servlets</name>
 	<version>1.0</version>
 

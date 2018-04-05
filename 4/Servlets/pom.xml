@@ -10,6 +10,8 @@
 	<name>Servlets</name>
 	<version>1.0</version>
 
+	<packaging>war</packaging>
+
 	<contributors>
 		<contributor>
 			<name>Dominik Harmim</name>
@@ -24,6 +26,39 @@
 			<version>4.0.0</version>
 		</dependency>
 	</dependencies>
+
+	<build>
+		<finalName>icp2152-servlets</finalName>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.2.0</version>
+
+				<configuration>
+					<warSourceDirectory>${basedir}/src/main/webapp</warSourceDirectory>
+					<webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+
+				<configuration>
+					<hostName>localhost</hostName>
+					<port>8081</port>
+					<path>/${project.build.finalName}</path>
+					<warFile>${project.build.directory}/${project.build.finalName}.war</warFile>
+					<warDirectory>${project.build.directory}/${project.build.finalName}</warDirectory>
+					<username>root</username>
+					<password>root</password>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

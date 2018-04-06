@@ -19,9 +19,14 @@ import javax.servlet.annotation.WebServlet;
 @WebServlet(name = "LoginServlet", urlPatterns = {"/login-servlet"})
 public class LoginServlet extends HttpServlet
 {
+	/**
+	 * {@inheritDoc}
+	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException
 	{
 		response.setContentType("text/html");
+		response.setCharacterEncoding("utf-8");
+		request.setCharacterEncoding("utf-8");
 		PrintWriter out = response.getWriter();
 
 		out.print(
@@ -32,7 +37,7 @@ public class LoginServlet extends HttpServlet
 			"<title>Login</title>\n" +
 			"</head>\n" +
 			"<body>\n" +
-			"Hi user " + request.getParameter("username") + ". You are now logged into the system." +
+			"Hi user " + request.getParameter("username") + ". You are now logged into the system.\n" +
 			"</body>\n" +
 			"</html>\n"
 		);

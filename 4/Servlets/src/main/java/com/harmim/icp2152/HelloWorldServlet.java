@@ -19,9 +19,13 @@ import javax.servlet.annotation.WebServlet;
 @WebServlet(name = "HelloWorldServlet", urlPatterns = {"/hello-world-servlet"})
 public class HelloWorldServlet extends HttpServlet
 {
+	/**
+	 * {@inheritDoc}
+	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException
 	{
 		response.setContentType("text/html");
+		response.setCharacterEncoding("utf-8");
 		PrintWriter out = response.getWriter();
 
 		out.print(

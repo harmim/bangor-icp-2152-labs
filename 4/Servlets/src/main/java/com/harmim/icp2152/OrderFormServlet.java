@@ -20,9 +20,14 @@ import javax.servlet.annotation.WebServlet;
 @WebServlet(name = "OrderFormServlet", urlPatterns = {"/order-form-servlet"})
 public class OrderFormServlet extends HttpServlet
 {
+	/**
+	 * {@inheritDoc}
+	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException
 	{
 		response.setContentType("text/html");
+		response.setCharacterEncoding("utf-8");
+		request.setCharacterEncoding("utf-8");
 		PrintWriter out = response.getWriter();
 
 		StringBuilder parameters = new StringBuilder();
@@ -41,7 +46,7 @@ public class OrderFormServlet extends HttpServlet
 			"</head>\n" +
 			"<body>\n" +
 			"<h1>Testing doPost</h1>\n" +
-			"<p>\n" + parameters.toString() + "</p>\n" +
+			"<p>\n" + parameters + "</p>\n" +
 			"</body>\n" +
 			"</html>\n"
 		);

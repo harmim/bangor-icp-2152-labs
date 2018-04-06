@@ -42,7 +42,13 @@
 		</div>
 
 		<input type="submit" value="Place order">
-		<input type="button" value="Cancel" onclick="document.location.href=window.location.pathname">
+		<input type="button" id="buttonCancel" value="Cancel">
 	</form>
+
+	<script>
+		document.getElementById("buttonCancel").onclick = function () {
+			document.location.href=window.location.pathname;
+		};
+	</script>
 </body>
 </html>

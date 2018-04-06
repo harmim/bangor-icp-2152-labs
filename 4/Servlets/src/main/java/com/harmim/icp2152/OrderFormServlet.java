@@ -46,7 +46,7 @@ public class OrderFormServlet extends HttpServlet
 			"</head>\n" +
 			"<body>\n" +
 			"<h1>Testing doPost</h1>\n" +
-			"<p>\n" + parameters + "</p>\n" +
+			"<p>\n" + parameters + "\n</p>\n" +
 			"</body>\n" +
 			"</html>\n"
 		);

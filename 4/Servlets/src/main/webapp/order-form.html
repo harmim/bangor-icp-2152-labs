@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Order form</title>
+	<meta name="author" content="Dominik Harmim, harmim6@gmail.com">
+
+	<style>
+		ul.no-style { list-style-type: none; }
+		.margin-bottom { margin-bottom: 1.5em; }
+	</style>
+</head>
+<body>
+	<form action="order-form-servlet" method="post">
+		<h1>XYZ Computers: Order form</h1>
+
+		<div class="margin-bottom">
+			<table>
+				<tr>
+					<td><label for="description">Description:</label></td>
+					<td><input type="text" id="description" name="description"></td>
+				</tr>
+				<tr>
+					<td><label for="code">Code:</label></td>
+					<td><input type="text" id="code" name="code"></td>
+				</tr>
+				<tr>
+					<td><label for="quantity">Quantity:</label></td>
+					<td><input type="number" id="quantity" name="quantity"></td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="margin-bottom">
+			Delivery:
+			<ul class="no-style">
+				<li><label><input type="radio" name="delivery" value="Same day"> Same day</label></li>
+				<li><label><input type="radio" name="delivery" value="Express"> Express</label></li>
+				<li><label><input type="radio" name="delivery" value="Standard"> Standard</label></li>
+			</ul>
+			<label>Customer ID: <input type="text" name="customerId"></label>
+		</div>
+
+		<input type="submit" value="Place order">
+		<input type="button" value="Cancel" onclick="document.location.href=window.location.pathname">
+	</form>
+</body>
+</html>

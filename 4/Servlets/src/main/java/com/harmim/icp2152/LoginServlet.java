@@ -25,15 +25,15 @@ public class LoginServlet extends HttpServlet
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException
 	{
 		response.setContentType("text/html");
-		response.setCharacterEncoding("utf-8");
-		request.setCharacterEncoding("utf-8");
+		response.setCharacterEncoding("UTF-8");
+		request.setCharacterEncoding("UTF-8");
 		PrintWriter out = response.getWriter();
 
 		out.print(
 			"<!DOCTYPE html>\n" +
 			"<html>\n" +
 			"<head>\n" +
-			"<meta charset=\"utf-8\">\n" +
+			"<meta charset=\"UTF-8\">\n" +
 			"<title>Login</title>\n" +
 			"</head>\n" +
 			"<body>\n" +

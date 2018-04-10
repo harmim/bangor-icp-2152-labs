@@ -26,8 +26,8 @@ public class OrderFormServlet extends HttpServlet
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException
 	{
 		response.setContentType("text/html");
-		response.setCharacterEncoding("utf-8");
-		request.setCharacterEncoding("utf-8");
+		response.setCharacterEncoding("UTF-8");
+		request.setCharacterEncoding("UTF-8");
 		PrintWriter out = response.getWriter();
 
 		StringBuilder parameters = new StringBuilder();
@@ -41,7 +41,7 @@ public class OrderFormServlet extends HttpServlet
 			"<!DOCTYPE html>\n" +
 			"<html>\n" +
 			"<head>\n" +
-			"<meta charset=\"utf-8\">\n" +
+			"<meta charset=\"UTF-8\">\n" +
 			"<title>Testing doPost</title>\n" +
 			"</head>\n" +
 			"<body>\n" +

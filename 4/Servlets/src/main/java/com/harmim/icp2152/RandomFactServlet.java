@@ -59,14 +59,14 @@ public class RandomFactServlet extends HttpServlet
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException
 	{
 		response.setContentType("text/html");
-		response.setCharacterEncoding("utf-8");
+		response.setCharacterEncoding("UTF-8");
 		PrintWriter out = response.getWriter();
 
 		out.print(
 			"<!DOCTYPE html>\n" +
 			"<html>\n" +
 			"<head>\n" +
-			"<meta charset=\"utf-8\">\n" +
+			"<meta charset=\"UTF-8\">\n" +
 			"<title>Testing doPost</title>\n" +
 			"</head>\n" +
 			"<body>\n" +
